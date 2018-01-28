@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Learn String By Creating an Email Validation Program</title>
+        <script type="text/javascript">
+        function mailcheck(mail){
+        if (mail.indexOf("@")!=-1 && mail.indexOf(".")!=-1)
+        alert("Congratulations !! this is the correct email")
+        else
+        alert("Your email is invalid..")
+        }
+        </script>
+</head>
+<body>
+   <center><h2>Input This Email</h2> <form name="utopian" onSubmit="mailcheck(this.utopian_input.value);return false">
+        <input type="text" size=20 name="utopian_input"> <input type="submit" value="Check Email">
+        </form></center>
+</body>
+</html>
