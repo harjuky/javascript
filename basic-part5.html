@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Price Calculator</title>
+<link href="https://rawgit.com/harjuky/javascript/master/calculator.css"rel="stylesheet" type="text/css">
+<script language="javascript">
+function steem_power(val) {
+  price = val * 0.0005;
+  document.getElementById('o1').value=val;
+  document.getElementById('price1').value=price;
+  sp_sbd();
+}
+function steem_dollar(val) {
+  price = val * 0.0006;
+  document.getElementById('o2').value=val;
+  document.getElementById('price2').value=price;
+  sp_sbd();
+}
+function sp_sbd(){
+  var h1 =parseFloat( document.getElementById("price1").value);
+  var h2 =parseFloat( document.getElementById("price2").value);
+  var Total = h1 + h2;
+  document.getElementById("priceTot").value = Total;
+}
+</script>
+</head>
+ 
+<body>
+   <div id="content">
+   <h3><center>Calculator Steem Power &amp; Steem Dollar</center></h3>
+     <form>
+        <div id="left">
+            <b>Steem Power</b><br/>
+            <input type="range" min="0" max="1000" value="0" step="1" oninput="steem_power(this.value);" id="input1" />
+            <output id="o1"></output>
+            <label>SP</label>           
+        </div>
+        <div id="right">
+            <h4>BTC <input type="text" id="price1" value="0"></h4>
+        </div>
+        <br/>
+        <div id="left">
+            <b>Steem Dollar</b><br/>
+            <input type="range" min="0" max="1000" value="0" step="1" oninput="steem_dollar(this.value);" id="input2" />
+            <output id="o2"></output>
+            <label>SBD</label>           
+        </div>
+        <div id="right">
+            <h4>BTC <input type="text" id="price2" value="0"></h4>
+        </div>
+        <br/>
+        <div id="left">
+            <br/><br/><h4>Total SP+SBD</h4>            
+        </div>
+        <div id="right">
+            <h4>BTC <input type="text" id="priceTot" value="0"></h4>
+        </div>
+      </form>  
+   </div>
+</body>
+</html>
