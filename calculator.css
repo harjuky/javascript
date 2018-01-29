@@ -1,3 +1,4 @@
+<style>
 #content{
     max-width:900px;
     width:100%;
@@ -46,3 +47,4 @@ input[type='range']::-moz-range-thumb {
      height: 20px;
      width: 20px;
 }
+</style>
